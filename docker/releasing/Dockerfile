@@ -15,3 +15,4 @@ RUN git config --global --add safe.directory /app
 ENV COMPOSER_ALLOW_SUPERUSER=1
 ENV PATH="${PATH}:/root/.composer/vendor/bin"
 COPY --from=composer /composer /usr/bin/composer
+#  rewrite ^/(.*)$ /OneManager2/index.php?/$1 last;
